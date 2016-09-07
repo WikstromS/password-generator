@@ -22,9 +22,10 @@ public class laskin
     public static void Main(string[] args)
     {
        Console.WriteLine("Hei! Tervetuloa käyttämään ohjelmaa.\nKuinka pitkän salasanan haluat? ");
-       string valinta = Console.ReadLine();
+       // Otetaan käyttäjältä syöte, kuinka pitkän salasanan hän haluaa.
+       string valinta = Console.ReadLine(); 
        int pituus =  int.Parse(valinta);
-        
+  
 
         generoi(pituus);
 
