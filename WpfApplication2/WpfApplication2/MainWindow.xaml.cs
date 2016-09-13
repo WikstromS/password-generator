@@ -21,11 +21,11 @@ namespace WpfApplication2
     public partial class MainWindow : Window
     {
 
-       public string sallitut = "";
-       public string LowerCase = "abcdefghijklmnopqrstuvwxyzåöä";
-       public string UpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÖÄ";
-       public string Symbols = "!@$?_-";
-       public string nums = "0123456789";
+        public string sallitut = "";
+        public string LowerCase = "abcdefghijklmnopqrstuvwxyzåöä";
+        public string UpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÖÄ";
+        public string Symbols = "!@$?_-";
+        public string nums = "0123456789";
         public int N;
 
         public MainWindow()
@@ -39,16 +39,10 @@ namespace WpfApplication2
             
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
-
-            
+            // GENEROI SALASANAN
             int pituus = N;
-          
-           
             char[] kirjaimet = new char[pituus];
             Random rand = new Random();
-
-            
 
             for (int i = 0; i < pituus; i++)
             {
@@ -66,15 +60,6 @@ namespace WpfApplication2
             N = int.Parse(myString);
             //ottaa comboboxin valitun ja muuttaa sen intiksi
         }
-
-
-
-        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-           
-        }
-
-
 
 
                 // CHECCKAUKSET
