@@ -16,7 +16,7 @@
         <CheckBox x:Name="symbols" Content="Special symbols" HorizontalAlignment="Left" Margin="94,333,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="symbols_Checked" Unchecked="symbols_Unchecked"/>
         <CheckBox x:Name="lowerCase" Content="Lowercase" HorizontalAlignment="Left" Margin="343,291,0,0" VerticalAlignment="Top"  FontSize="20" Foreground="White" Checked="lowerCase_Checked" Unchecked="lowerCase_Unchecked"/>
         <CheckBox x:Name="numbers" Content="Numbers" HorizontalAlignment="Left" Margin="343,333,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="numbers_Checked" Unchecked="numbers_Unchecked"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="94,407,0,0" VerticalAlignment="Top" Width="120">
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="94,407,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged">
             <ComboBoxItem Content="5"/>
             <ComboBoxItem Content="6"/>
             <ComboBoxItem Content="7"/>

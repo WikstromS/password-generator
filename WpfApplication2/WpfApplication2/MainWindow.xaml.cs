@@ -26,14 +26,13 @@ namespace WpfApplication2
        public string UpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÖÄ";
        public string Symbols = "!@$?_-";
        public string nums = "0123456789";
-
+        public int N;
 
         public MainWindow()
         {
+            
             InitializeComponent();
             new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "C:\\Users\\Santun\\Password-Generator\\WpfApplication2\\lataus.jpg")));
-           
-            
 
         }
         
@@ -43,7 +42,7 @@ namespace WpfApplication2
 
 
             
-            int pituus = 10;
+            int pituus = N;
           
            
             char[] kirjaimet = new char[pituus];
@@ -60,7 +59,16 @@ namespace WpfApplication2
             MessageBox.Show(salasana);
         }
 
-      
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            string myString = ((ComboBoxItem)comboBox.SelectedItem).Content.ToString();
+            N = int.Parse(myString);
+            //ottaa comboboxin valitun ja muuttaa sen intiksi
+        }
+
+
+
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
            
@@ -119,5 +127,7 @@ namespace WpfApplication2
             sallitut = sallitut.Replace(UpperCase, "");
             
         }
+
+        
     }
 }
