@@ -58,11 +58,18 @@ namespace WpfApplication2
 
             string myString = ((ComboBoxItem)comboBox.SelectedItem).Content.ToString();
             N = int.Parse(myString);
+            if (N < 8)
+                MessageBox.Show("Warning! It's not safe to have a password under 8 characters!");
+
             //ottaa comboboxin valitun ja muuttaa sen intiksi
         }
 
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
-                // CHECCKAUKSET
+        }
+
+        // CHECCKAUKSET
         private void upperCase_Checked(object sender, RoutedEventArgs e)
         {
             sallitut += UpperCase;
@@ -113,6 +120,6 @@ namespace WpfApplication2
             
         }
 
-        
+     
     }
 }
