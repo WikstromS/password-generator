@@ -1,0 +1,14 @@
+c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.csprojResolveAssemblyReference.cache
+c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\MainWindow.g.cs
+c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\App.g.cs
+c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\MainWindow.baml
+c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resources.resources
+c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.csproj.GenerateResource.Cache
+c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Debug\Password generator GUI.exe.config
+c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Debug\Password generator GUI.exe
+c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\bin\Debug\Password generator GUI.pdb
+c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI_MarkupCompile.cache
+c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI_MarkupCompile.lref
+c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI.g.resources
+c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI.exe
+c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI.pdb
