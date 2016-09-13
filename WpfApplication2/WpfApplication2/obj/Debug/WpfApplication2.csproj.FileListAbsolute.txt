@@ -26,3 +26,17 @@ C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication
 C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI.g.resources
 C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resources.resources
 C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.csproj.GenerateResource.Cache
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\bin\Debug\Password generator GUI.exe.config
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI.exe
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI.pdb
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.csprojResolveAssemblyReference.cache
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\MainWindow.g.cs
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\App.g.cs
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI_MarkupCompile.cache
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI_MarkupCompile.lref
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\bin\Debug\Password generator GUI.exe
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\bin\Debug\Password generator GUI.pdb
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\MainWindow.baml
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI.g.resources
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resources.resources
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.csproj.GenerateResource.Cache

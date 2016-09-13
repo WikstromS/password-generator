@@ -8,16 +8,44 @@
         Title="MainWindow" Height="700" Width="600" Background="LightBlue">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\lataus.jpg"/>
+            <ImageBrush ImageSource="C:\\Users\\Santun\\Password-Generator\\WpfApplication2\\lataus.jpg"/>
         </Grid.Background>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="74" Margin="212,34,0,561" TextWrapping="Wrap"  Text="WELCOME" FontSize="36"  VerticalAlignment="Center" Width="180" SelectionBrush="{x:Null}" Background="{x:Null}" TextChanged="textBox_TextChanged" Foreground="White"/>
         <Button x:Name="button" Content="Generate password" FontSize="24" HorizontalAlignment="Left" Margin="202,533,0,0" VerticalAlignment="Top" Background="Orange" Width="212" Height="56" Click="button_Click"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="52,418,0,0" VerticalAlignment="Top" Width="150" AllowDrop="True" SelectionChanged="comboBox_SelectionChanged">
+        <CheckBox x:Name="upperCase" Content="Uppercase" HorizontalAlignment="Left" Margin="94,291,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="upperCase_Checked" Unchecked="upperCase_Unchecked" />
+        <CheckBox x:Name="symbols" Content="Special symbols" HorizontalAlignment="Left" Margin="94,333,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="symbols_Checked" Unchecked="symbols_Unchecked"/>
+        <CheckBox x:Name="lowerCase" Content="Lowercase" HorizontalAlignment="Left" Margin="343,291,0,0" VerticalAlignment="Top"  FontSize="20" Foreground="White" Checked="lowerCase_Checked" Unchecked="lowerCase_Unchecked"/>
+        <CheckBox x:Name="numbers" Content="Numbers" HorizontalAlignment="Left" Margin="343,333,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="numbers_Checked" Unchecked="numbers_Unchecked"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="94,407,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="5"/>
+            <ComboBoxItem Content="6"/>
+            <ComboBoxItem Content="7"/>
+            <ComboBoxItem Content="8"/>
+            <ComboBoxItem Content="9"/>
+            <ComboBoxItem Content="10"/>
+            <ComboBoxItem Content="11"/>
+            <ComboBoxItem Content="12"/>
+            <ComboBoxItem Content="13"/>
+            <ComboBoxItem Content="14"/>
+            <ComboBoxItem Content="15"/>
+            <ComboBoxItem Content="16"/>
+            <ComboBoxItem Content="17"/>
+            <ComboBoxItem Content="18"/>
+            <ComboBoxItem Content="19"/>
+            <ComboBoxItem Content="20"/>
+            <ComboBoxItem Content="21"/>
+            <ComboBoxItem Content="22"/>
+            <ComboBoxItem Content="23"/>
+            <ComboBoxItem Content="24"/>
+            <ComboBoxItem Content="25"/>
+            <ComboBoxItem Content="26"/>
+            <ComboBoxItem Content="27"/>
+            <ComboBoxItem Content="28"/>
+            <ComboBoxItem Content="29"/>
+            <ComboBoxItem Content="30"/>
+            <ComboBoxItem Content="31"/>
+            <ComboBoxItem Content="32"/>
         </ComboBox>
-        <CheckBox x:Name="upperCase" Content="UpperCase" HorizontalAlignment="Left" Margin="94,291,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="upperCase_Checked" />
-        <CheckBox x:Name="special" Content="Special symbols" HorizontalAlignment="Left" Margin="94,333,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White"/>
-        <CheckBox x:Name="lowerCase" Content="Lowercase" HorizontalAlignment="Left" Margin="343,291,0,0" VerticalAlignment="Top" IsChecked="True" IsEnabled="False" FontSize="20" Foreground="White"/>
-        <CheckBox x:Name="numbers" Content="Numbers" HorizontalAlignment="Left" Margin="343,333,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White"/>
 
     </Grid>
 </Window>
