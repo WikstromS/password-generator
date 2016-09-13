@@ -12,3 +12,17 @@ c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplicati
 c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI.g.resources
 c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI.exe
 c:\users\wiku\documents\visual studio 2015\Projects\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI.pdb
+C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\bin\Debug\Password generator GUI.exe.config
+C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI.exe
+C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI.pdb
+C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\bin\Debug\Password generator GUI.exe
+C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\bin\Debug\Password generator GUI.pdb
+C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.csprojResolveAssemblyReference.cache
+C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\obj\Debug\MainWindow.g.cs
+C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\obj\Debug\App.g.cs
+C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI_MarkupCompile.cache
+C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI_MarkupCompile.lref
+C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\obj\Debug\MainWindow.baml
+C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI.g.resources
+C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resources.resources
+C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.csproj.GenerateResource.Cache

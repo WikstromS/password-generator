@@ -23,14 +23,27 @@ namespace WpfApplication2
         public MainWindow()
         {
             InitializeComponent();
+            new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "C:\\Users\\Toni\\Documents\\GitHub\\password-generator\\WpfApplication2\\lataus.jpg")));
+           
+            
+
         }
+        
             
         private void button_Click(object sender, RoutedEventArgs e)
         {
+
             int pituus = 10;
-            string sallitut = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@$?_-";
+            string sallitut = "";
+            string lowerCase = "abcdefghijklmnopqrstuvwxyz";
+            string upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÖÄ";
+            string symbols = "!@$?_-";
+            string nums = "0123456789";
+           
             char[] kirjaimet = new char[pituus];
             Random rand = new Random();
+
+            if(upperCase.)
 
             for (int i = 0; i < pituus; i++)
             {
@@ -43,27 +56,18 @@ namespace WpfApplication2
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string pituus;
-            pituus = comboBox.Text;
-            comboBox.Items.Add("5");
-            comboBox.Items.Add("6");
-            comboBox.Items.Add("7");
-            comboBox.Items.Add("8");
-            comboBox.Items.Add("9");
-            comboBox.Items.Add("10");
-            comboBox.Items.Add("11");
-            comboBox.Items.Add("12");
-            comboBox.Items.Add("13");
-            comboBox.Items.Add("14");
-            comboBox.Items.Add("15");
-            comboBox.Items.Add("16");
-            comboBox.Items.Add("17");
-            comboBox.Items.Add("18");
-            comboBox.Items.Add("19");
-            comboBox.Items.Add("20");
-            comboBox.Items.Add("21");
-            comboBox.Items.Add("22");
-            comboBox.Items.Add("23");
+           
+  
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+           
+        }
+
+        private void upperCase_Checked(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

@@ -5,12 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="600" Background="LightBlue">
+        Title="MainWindow" Height="700" Width="600" Background="LightBlue">
     <Grid>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="116" Margin="202,46,0,307" TextWrapping="Wrap" Text="WELCOME" FontSize="36" Background="LightBlue" VerticalAlignment="Center" Width="180"/>
-        <Button x:Name="button" Content="Generate password" HorizontalAlignment="Left" Margin="202,350,0,0" VerticalAlignment="Top" Background="Orange" Width="212" Height="56" Click="button_Click"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="202,232,0,0" VerticalAlignment="Top" Width="120" AllowDrop="True" SelectionChanged="comboBox_SelectionChanged">
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Toni\Documents\GitHub\password-generator\WpfApplication2\lataus.jpg"/>
+        </Grid.Background>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="74" Margin="212,34,0,561" TextWrapping="Wrap"  Text="WELCOME" FontSize="36"  VerticalAlignment="Center" Width="180" SelectionBrush="{x:Null}" Background="{x:Null}" TextChanged="textBox_TextChanged" Foreground="White"/>
+        <Button x:Name="button" Content="Generate password" FontSize="24" HorizontalAlignment="Left" Margin="202,533,0,0" VerticalAlignment="Top" Background="Orange" Width="212" Height="56" Click="button_Click"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="52,418,0,0" VerticalAlignment="Top" Width="150" AllowDrop="True" SelectionChanged="comboBox_SelectionChanged">
         </ComboBox>
+        <CheckBox x:Name="upperCase" Content="UpperCase" HorizontalAlignment="Left" Margin="94,291,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="upperCase_Checked" />
+        <CheckBox x:Name="special" Content="Special symbols" HorizontalAlignment="Left" Margin="94,333,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White"/>
+        <CheckBox x:Name="lowerCase" Content="Lowercase" HorizontalAlignment="Left" Margin="343,291,0,0" VerticalAlignment="Top" IsChecked="True" IsEnabled="False" FontSize="20" Foreground="White"/>
+        <CheckBox x:Name="numbers" Content="Numbers" HorizontalAlignment="Left" Margin="343,333,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White"/>
 
     </Grid>
 </Window>
