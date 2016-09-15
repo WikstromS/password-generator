@@ -32,7 +32,7 @@ namespace WpfApplication2
         {
             
             InitializeComponent();                                      // TÄYTYY KEKSIÄ PAREMPI VAIHTOEHTO
-            new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "C:\\Users\\Santun\\Password-Generator\\WpfApplication2\\lataus.jpg")));
+            new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "C:\\Users\\Toni\\Documents\\GitHub\\password-generator\\WpfApplication2\\lataus.jpg")));
 
         }
         
@@ -51,6 +51,7 @@ namespace WpfApplication2
 
             string salasana = new string(kirjaimet);
             MessageBox.Show(salasana);
+            Clipboard.SetText(salasana);
         }
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
