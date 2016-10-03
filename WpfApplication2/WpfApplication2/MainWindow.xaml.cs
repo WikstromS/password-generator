@@ -58,17 +58,20 @@ namespace WpfApplication2
             }
 
             string salasana = new string(kirjaimet);
-            MessageBox.Show(salasana);
-            MessageBox.Show(Encrypt(salasana));
-            MessageBox.Show(Decrypt(Encrypt(salasana)));
+            //MessageBox.Show(salasana);
+            //MessageBox.Show(Encrypt(salasana));
+            //MessageBox.Show(Decrypt(Encrypt(salasana)));
+            richTextBox.AppendText(salasana);
+         
+            richTextBox.AppendText(Encrypt(salasana));
              
             
             
         }
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+        {    
+            
             string myString = ((ComboBoxItem)comboBox.SelectedItem).Content.ToString();
             N = int.Parse(myString);
             if (N < 8)
@@ -77,10 +80,7 @@ namespace WpfApplication2
             //ottaa comboboxin valitun ja muuttaa sen intiksi
         }
 
-        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+      
 
         // CHECCKAUKSET
         private void upperCase_Checked(object sender, RoutedEventArgs e)
@@ -218,6 +218,16 @@ namespace WpfApplication2
             {
                 Console.WriteLine(ex.ToString());
             }
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            richTextBox.Document.Blocks.Clear();
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
