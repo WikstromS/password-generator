@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Security.Cryptography;
+using System.IO;
+using Microsoft.Win32;
+using System.Net.Mail;
 
 namespace WpfApplication2
 {
@@ -27,6 +31,10 @@ namespace WpfApplication2
         public string Symbols = "!@$?_-";
         public string nums = "0123456789";
         public int N;
+
+        static readonly string PasswordHash = "P@@Sw0rd";
+        static readonly string SaltKey = "S@LT&KEY";
+        static readonly string VIKey = "@1B2c3D4e5F6g7H8";
 
         public MainWindow()
         {
@@ -51,6 +59,11 @@ namespace WpfApplication2
 
             string salasana = new string(kirjaimet);
             MessageBox.Show(salasana);
+            MessageBox.Show(Encrypt(salasana));
+            MessageBox.Show(Decrypt(Encrypt(salasana)));
+             
+            
+            
         }
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -120,6 +133,91 @@ namespace WpfApplication2
             
         }
 
-     
+        // Ottaa parametrina generoidun salasanan  ja enkryptaa sen
+        public static string Encrypt(string plainText)
+        {
+            byte[] plainTextBytes = Encoding.UTF8.GetBytes(plainText);
+
+            byte[] keyBytes = new Rfc2898DeriveBytes(PasswordHash, Encoding.ASCII.GetBytes(SaltKey)).GetBytes(256 / 8);
+            var symmetricKey = new RijndaelManaged() { Mode = CipherMode.CBC, Padding = PaddingMode.Zeros };
+            var encryptor = symmetricKey.CreateEncryptor(keyBytes, Encoding.ASCII.GetBytes(VIKey));
+
+            byte[] cipherTextBytes;
+
+            using (var memoryStream = new MemoryStream())
+            {
+                using (var cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write))
+                {
+                    cryptoStream.Write(plainTextBytes, 0, plainTextBytes.Length);
+                    cryptoStream.FlushFinalBlock();
+                    cipherTextBytes = memoryStream.ToArray();
+                    cryptoStream.Close();
+                }
+                memoryStream.Close();
+
+            }
+            return Convert.ToBase64String(cipherTextBytes);
+        }
+
+        // Dekryptaa salatun salasanan ja palauttaa sen
+        public static string Decrypt(string encryptedText)
+        {
+            byte[] cipherTextBytes = Convert.FromBase64String(encryptedText);
+            byte[] keyBytes = new Rfc2898DeriveBytes(PasswordHash, Encoding.ASCII.GetBytes(SaltKey)).GetBytes(256 / 8);
+            var symmetricKey = new RijndaelManaged() { Mode = CipherMode.CBC, Padding = PaddingMode.None };
+
+            var decryptor = symmetricKey.CreateDecryptor(keyBytes, Encoding.ASCII.GetBytes(VIKey));
+            var memoryStream = new MemoryStream(cipherTextBytes);
+            var cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read);
+            byte[] plainTextBytes = new byte[cipherTextBytes.Length];
+
+            int decryptedByteCount = cryptoStream.Read(plainTextBytes, 0, plainTextBytes.Length);
+            memoryStream.Close();
+            cryptoStream.Close();
+            return Encoding.UTF8.GetString(plainTextBytes, 0, decryptedByteCount).TrimEnd("\0".ToCharArray());
+        }
+
+
+                // Lähettää sähköpostin kun nappia painaa! :))
+        private void BtnSend_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                MailMessage mail = new MailMessage();
+                //SMTP address and port here
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com", 587 );
+                //Put the email address
+                mail.From = new MailAddress("wikke93@gmail.com");
+                //Put the email where you want to send.
+                mail.To.Add("kekkosenseppo@gmail.com");
+
+                mail.Subject = "Generoitu Salasana";
+
+                StringBuilder sbBody = new StringBuilder();
+
+                sbBody.AppendLine("Hei käyttäjä!");
+                sbBody.AppendLine("Tässä salasanasi!");
+                sbBody.AppendLine("Salasana tähän!");
+
+                mail.Body = sbBody.ToString();
+
+                //mail.Attachments.Add(liite) tällä tavalla salasanan lähetys?
+
+                //username and password!
+
+                SmtpServer.Credentials = new System.Net.NetworkCredential("wikke93@gmail.com", "Heinekenmerkkihiha1");
+                //Set Smtp server port
+                SmtpServer.Port = 587;
+                SmtpServer.EnableSsl = true;
+
+                SmtpServer.Send(mail);
+                MessageBox.Show("Salasana lähetettiin :) ");
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
     }
 }
