@@ -40,7 +40,7 @@ namespace WpfApplication2
         {
             
             InitializeComponent();                                      // TÄYTYY KEKSIÄ PAREMPI VAIHTOEHTO
-            new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "C:\\Users\\Santun\\Password-Generator\\WpfApplication2\\lataus.jpg")));
+            new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "C://Users//Santun//Password-Generator//WpfApplication2//lataus.jpg")));
 
         }
         

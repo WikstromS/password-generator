@@ -8,7 +8,7 @@
         Title="Password Generator" Height="700" Width="600" Background="LightBlue">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C://Users//Toni//Documents//GitHub//password-generator//WpfApplication2//lataus.jpg"/>
+            <ImageBrush ImageSource="C://Users//Santun//Password-Generator//WpfApplication2//lataus.jpg"/>
         </Grid.Background>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="74" Margin="212,34,0,561" TextWrapping="Wrap"  Text="WELCOME" FontSize="36"  VerticalAlignment="Center" Width="180" SelectionBrush="{x:Null}" Background="{x:Null}" TextChanged="textBox_TextChanged"  Foreground="White"/>
         <Button x:Name="button" Content="Generate password" FontSize="24" HorizontalAlignment="Left" Margin="94,538,0,0" VerticalAlignment="Top" Background="Orange" Width="212" Height="56" Click="button_Click"/>
