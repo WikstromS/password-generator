@@ -25,12 +25,13 @@ namespace WpfApplication2
     public partial class MainWindow : Window
     {
 
-        public string sallitut = "";
+        public static string sallitut = "";
         public string LowerCase = "abcdefghijklmnopqrstuvwxyzåöä";
         public string UpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÖÄ";
         public string Symbols = "!@$?_-";
         public string nums = "0123456789";
-        public int N;
+        public static int N;
+        public static string passw;
 
         static readonly string PasswordHash = "P@@Sw0rd";
         static readonly string SaltKey = "S@LT&KEY";
@@ -40,14 +41,13 @@ namespace WpfApplication2
         {
             
             InitializeComponent();                                      // TÄYTYY KEKSIÄ PAREMPI VAIHTOEHTO
-            new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "C://Users//Santun//Password-Generator//WpfApplication2//lataus.jpg")));
+            new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "C://Users//wiku//password-generator//WpfApplication2//lataus.jpg")));
 
         }
         
-            
-        private void button_Click(object sender, RoutedEventArgs e)
+
+        public static string generate()
         {
-            // GENEROI SALASANAN
             int pituus = N;
             char[] kirjaimet = new char[pituus];
             Random rand = new Random();
@@ -56,16 +56,19 @@ namespace WpfApplication2
             {
                 kirjaimet[i] = sallitut[rand.Next(0, sallitut.Length)];         //TOIMII 
             }
-
             string salasana = new string(kirjaimet);
-            //MessageBox.Show(salasana);
-            //MessageBox.Show(Encrypt(salasana));
-            //MessageBox.Show(Decrypt(Encrypt(salasana)));
-            richTextBox.AppendText(salasana);
-         
-            richTextBox.AppendText(Encrypt(salasana));
-             
+            return salasana;
+        }
             
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+          
+            
+            string salasana = generate();
+            passw = salasana;
+            richTextBox.AppendText(salasana);
+            richTextBox.AppendText(Encrypt(generate()));
+               
             
         }
 
@@ -197,7 +200,8 @@ namespace WpfApplication2
 
                 sbBody.AppendLine("Hei käyttäjä!");
                 sbBody.AppendLine("Tässä salasanasi!");
-                sbBody.AppendLine("Salasana tähän!");
+                sbBody.AppendLine(passw);
+                
 
                 mail.Body = sbBody.ToString();
 
@@ -205,7 +209,7 @@ namespace WpfApplication2
 
                 //username and password!
 
-                SmtpServer.Credentials = new System.Net.NetworkCredential("wikke93@gmail.com", "Heinekenmerkkihiha1");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("pwgenerator93@gmail.com", "aspretto");
                 //Set Smtp server port
                 SmtpServer.Port = 587;
                 SmtpServer.EnableSsl = true;
