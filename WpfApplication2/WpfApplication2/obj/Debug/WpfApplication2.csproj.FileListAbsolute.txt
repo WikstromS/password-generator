@@ -54,3 +54,7 @@ C:\Users\wiku\password-generator\WpfApplication2\WpfApplication2\obj\Debug\MainW
 C:\Users\wiku\password-generator\WpfApplication2\WpfApplication2\obj\Debug\Password generator GUI.g.resources
 C:\Users\wiku\password-generator\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.Properties.Resources.resources
 C:\Users\wiku\password-generator\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.csproj.GenerateResource.Cache
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\Window1.g.cs
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\Window1.baml
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\Window2.g.cs
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\Window2.baml
