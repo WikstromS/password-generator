@@ -180,9 +180,7 @@ namespace WpfApplication2
             cryptoStream.Close();
             return Encoding.UTF8.GetString(plainTextBytes, 0, decryptedByteCount).TrimEnd("\0".ToCharArray());
         }
-
-
-                // Lähettää sähköpostin kun nappia painaa! :))
+                
         private void BtnSend_Click(object sender, RoutedEventArgs e)
         {
 

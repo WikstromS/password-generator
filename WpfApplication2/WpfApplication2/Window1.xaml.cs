@@ -28,7 +28,7 @@ namespace WpfApplication2
         {
             InitializeComponent();
         }
-
+        // Lähettää sähköpostin kun nappia painaa! :))
         private void button_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(WpfApplication2.MainWindow.passw);
