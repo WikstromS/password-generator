@@ -84,6 +84,12 @@ namespace WpfApplication2
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+            if (WpfApplication2.MainWindow.sallitut == "")
+            {
+                button.IsEnabled = false;
+            }
+            else
+                button.IsEnabled = true;
             userMail = textBox.Text;
         }
     }
