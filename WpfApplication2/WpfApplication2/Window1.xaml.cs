@@ -31,7 +31,7 @@ namespace WpfApplication2
         // Lähettää sähköpostin kun nappia painaa! :))
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(WpfApplication2.MainWindow.passw);
+        
             
                  try
             {
@@ -47,10 +47,11 @@ namespace WpfApplication2
 
                 StringBuilder sbBody = new StringBuilder();
 
-                sbBody.AppendLine("Hei käyttäjä!");
-                sbBody.AppendLine("Tässä salasanasi!");
-                sbBody.AppendLine(WpfApplication2.MainWindow.passw);
+                sbBody.AppendLine("Hello User!");
+                sbBody.AppendLine("Here's your encrypted password!");
                 sbBody.AppendLine(WpfApplication2.MainWindow.Encrypt(WpfApplication2.MainWindow.passw));
+                sbBody.AppendLine("You can decrypt the password by using our software and the Encryption window.");
+                sbBody.AppendLine("Have a wonderful day!");
                 
                 
 
@@ -66,7 +67,7 @@ namespace WpfApplication2
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(mail);
-                MessageBox.Show("Salasana lähetettiin :) ");
+                MessageBox.Show("The password was sent to: " + userMail);
 
             } 
             catch (Exception ex)
