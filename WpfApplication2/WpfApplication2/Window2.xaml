@@ -13,8 +13,8 @@
                 <GradientStop Color="#FFD8B1B1" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="25,93,0,0" TextWrapping="Wrap" Text="Enter Encrypted Password" VerticalAlignment="Top" Width="184" TextChanged="textBox_TextChanged"/>
-        <Button x:Name="button" Content="Decrypt" HorizontalAlignment="Left" Margin="244,96,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="25,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" TextChanged="textBox_TextChanged" />
+        <Button x:Name="button" Content="Decrypt" HorizontalAlignment="Left" Margin="244,96,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" IsEnabled="{Binding ElementName=textBox, Path=Text.Length}" />
         <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="54" Margin="25,191,0,0" VerticalAlignment="Top" Width="119" TextChanged="richTextBox_TextChanged">
             <FlowDocument>
                 <Paragraph>
@@ -22,6 +22,7 @@
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="24,153,0,0" TextWrapping="Wrap" Text="Here is your decrypted password" VerticalAlignment="Top" Height="24" Width="185"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="24,153,0,0" TextWrapping="Wrap" Text="Here is your decrypted password" VerticalAlignment="Top" Height="24" Width="185" Foreground="#FFF1EEEE"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="25,48,0,0" TextWrapping="Wrap" Text="Enter the encrypted password and press the Decrypt button" VerticalAlignment="Top" Foreground="#FFEEEBEB" Width="274"/>
     </Grid>
 </Window>

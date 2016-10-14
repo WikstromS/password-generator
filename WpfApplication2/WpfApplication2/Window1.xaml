@@ -13,9 +13,11 @@
                 <GradientStop Color="#FFD8B1B1" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,63,0,0" TextWrapping="Wrap" Text="Enter E-mail address" VerticalAlignment="Top" Width="147" TextChanged="textBox_TextChanged"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,63,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="147" TextChanged="textBox_TextChanged"/>
         <Button x:Name="button" Content="Send Password" HorizontalAlignment="Left" Margin="74,142,0,0" VerticalAlignment="Top" Width="130" Height="46" Click="button_Click" IsEnabled="False"/>
-        <Button x:Name="button1" Content="Save" HorizontalAlignment="Left" Margin="190,66,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+        <Button x:Name="button1" Content="Save" HorizontalAlignment="Left" Margin="190,66,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"
+                IsEnabled="{Binding ElementName=textBox, Path=Text.Length}"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,34,0,0" TextWrapping="NoWrap" Text="Enter your E-mail here!" VerticalAlignment="Top" Foreground="#FFF7F5F5" Width="133"/>
 
     </Grid>
 </Window>

@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="C://Users//Santun//Password-Generator//WpfApplication2//lataus.jpg"/>
         </Grid.Background>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="74" Margin="186,21,0,574" TextWrapping="Wrap"  Text="WELCOME" FontSize="36"  VerticalAlignment="Center" Width="180" SelectionBrush="{x:Null}" Background="{x:Null}" TextChanged="textBox_TextChanged"  Foreground="White"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="74" Margin="186,21,0,574" TextWrapping="Wrap"  Text="WELCOME" FontSize="36"  VerticalAlignment="Center" Width="180" SelectionBrush="{x:Null}" Background="{x:Null}" TextChanged="textBox_TextChanged"  Foreground="White" BorderBrush="#FF2F3032"/>
         <Button x:Name="button" Content="Generate password" FontSize="24" HorizontalAlignment="Left" Margin="94,331,0,0" VerticalAlignment="Top" Background="Orange" Width="360" Height="78" Click="button_Click" IsEnabled="False"/>
         <CheckBox x:Name="upperCase" Content="Uppercase" HorizontalAlignment="Left" Margin="94,100,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="upperCase_Checked" Unchecked="upperCase_Unchecked" />
         <CheckBox x:Name="symbols" Content="Special symbols" HorizontalAlignment="Left" Margin="94,140,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="symbols_Checked" Unchecked="symbols_Unchecked"/>

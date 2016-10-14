@@ -27,6 +27,8 @@ namespace WpfApplication2
         public Window2()
         {
             InitializeComponent();
+
+           
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -37,6 +39,8 @@ namespace WpfApplication2
         private void button_Click(object sender, RoutedEventArgs e)
         {
             EncrPw = textBox.Text;
+
+
             richTextBox.AppendText(WpfApplication2.MainWindow.Decrypt(EncrPw));
         }
 
