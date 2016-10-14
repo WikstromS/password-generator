@@ -75,6 +75,7 @@ namespace WpfApplication2
 
             string salasana = generate();
             passw = salasana;
+            richTextBox.Document.Blocks.Clear();
             richTextBox.AppendText(Encrypt(generate()));
                
             
@@ -264,6 +265,12 @@ namespace WpfApplication2
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            richTextBox.SelectAll();
+            richTextBox.Copy();
         }
     }
 }
