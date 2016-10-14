@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication2"
         mc:Ignorable="d"
-        Title="Password Generator" Height="700" Width="600" Background="LightBlue">
+        Title="Password Generator" Height="700" Width="600" Background="LightBlue" ResizeMode="NoResize">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="C://Users//Santun//Password-Generator//WpfApplication2//lataus.jpg"/>
