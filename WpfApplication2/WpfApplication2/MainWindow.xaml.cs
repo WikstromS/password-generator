@@ -246,10 +246,6 @@ namespace WpfApplication2
       
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            richTextBox.Document.Blocks.Clear();
-        }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {

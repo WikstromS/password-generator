@@ -47,11 +47,10 @@
             <ComboBoxItem Content="32"/>
         </ComboBox>
         <Button x:Name="BtnSend" Content="Send password to e-mail" HorizontalAlignment="Left" Margin="308,199,0,0" VerticalAlignment="Top" Width="146" Height="60" Click="BtnSend_Click"/>
-        <Button x:Name="button1" Content="Clear" HorizontalAlignment="Left" Margin="94,546,0,0"  VerticalAlignment="Top" Width="76" Height="42" Click="button1_Click"/>
         <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="81" Margin="94,432,0,155"  Width="160" TextChanged="richTextBox_TextChanged">
         </RichTextBox>
         <Button x:Name="button2" Content="Encryption"  HorizontalAlignment="Left" Margin="350,434,0,0" VerticalAlignment="Top" Width="104" Height="80" Click="button2_Click"/>
-        <Button x:Name="button3" Content="Copy" HorizontalAlignment="Left" Margin="186,546,0,0" VerticalAlignment="Top" Width="86" Height="42" Click="button3_Click"/>
+        <Button x:Name="button3" Content="Copy" HorizontalAlignment="Left" Margin="94,546,0,0" VerticalAlignment="Top" Width="86" Height="42" Click="button3_Click"/>
 
     </Grid>
 </Window>
