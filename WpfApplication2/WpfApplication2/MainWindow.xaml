@@ -13,13 +13,12 @@
                 <GradientStop Color="#FFD31616" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="74" Margin="186,21,0,574" TextWrapping="Wrap"  Text="WELCOME" FontSize="36"  VerticalAlignment="Center" Width="180" SelectionBrush="{x:Null}" Background="{x:Null}" TextChanged="textBox_TextChanged"  Foreground="White" BorderBrush="#FF2F3032"/>
-        <Button x:Name="button" Content="Generate password" FontSize="24" HorizontalAlignment="Left" Margin="94,331,0,0" VerticalAlignment="Top" Background="Orange" Width="360" Height="78" Click="button_Click" IsEnabled="False"/>
-        <CheckBox x:Name="upperCase" Content="Uppercase" HorizontalAlignment="Left" Margin="94,100,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="upperCase_Checked" Unchecked="upperCase_Unchecked" />
-        <CheckBox x:Name="symbols" Content="Special symbols" HorizontalAlignment="Left" Margin="94,140,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="symbols_Checked" Unchecked="symbols_Unchecked"/>
-        <CheckBox x:Name="lowerCase" Content="Lowercase" HorizontalAlignment="Left" Margin="308,100,0,0" VerticalAlignment="Top"  FontSize="20" Foreground="White" Checked="lowerCase_Checked" Unchecked="lowerCase_Unchecked" RenderTransformOrigin="2.108,-2.115"/>
-        <CheckBox x:Name="numbers" Content="Numbers" HorizontalAlignment="Left" Margin="308,140,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="numbers_Checked" Unchecked="numbers_Unchecked" RenderTransformOrigin="-2.257,0.269"/>
-        <ComboBox x:Name="comboBox" IsEditable="True" IsReadOnly="True" SelectedIndex="5" HorizontalAlignment="Left" Margin="94,212,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged">
+        <Button x:Name="button" Content="Generate password" FontSize="24" HorizontalAlignment="Left" Margin="177,176,0,0" VerticalAlignment="Top" Background="Orange" Width="239" Height="57" Click="button_Click" IsEnabled="False"/>
+        <CheckBox x:Name="upperCase" Content="Uppercase" HorizontalAlignment="Left" Margin="139,43,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="upperCase_Checked" Unchecked="upperCase_Unchecked" />
+        <CheckBox x:Name="symbols" Content="Special symbols" HorizontalAlignment="Left" Margin="139,79,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="symbols_Checked" Unchecked="symbols_Unchecked"/>
+        <CheckBox x:Name="lowerCase" Content="Lowercase" HorizontalAlignment="Left" Margin="329,43,0,0" VerticalAlignment="Top"  FontSize="20" Foreground="White" Checked="lowerCase_Checked" Unchecked="lowerCase_Unchecked" RenderTransformOrigin="2.108,-2.115"/>
+        <CheckBox x:Name="numbers" Content="Numbers" HorizontalAlignment="Left" Margin="329,79,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="numbers_Checked" Unchecked="numbers_Unchecked" RenderTransformOrigin="-2.257,0.269"/>
+        <ComboBox x:Name="comboBox" IsEditable="True" IsReadOnly="True" SelectedIndex="5" HorizontalAlignment="Left" Margin="253,122,0,0" VerticalAlignment="Top" Width="74" SelectionChanged="comboBox_SelectionChanged" Height="25">
             <ComboBoxItem Content="5"/>
             <ComboBoxItem Content="6"/>
             <ComboBoxItem Content="7"/>
@@ -49,11 +48,10 @@
             <ComboBoxItem Content="31"/>
             <ComboBoxItem Content="32"/>
         </ComboBox>
-        <Button x:Name="BtnSend" Content="Send password to e-mail" HorizontalAlignment="Left" Margin="308,199,0,0" VerticalAlignment="Top" Width="146" Height="60" Click="BtnSend_Click" IsEnabled="False"/>
-        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="81" Margin="94,432,0,155"  Width="160" TextChanged="richTextBox_TextChanged" IsReadOnly="True"></RichTextBox>
-        <Button x:Name="button2" Content="Encryption"  HorizontalAlignment="Left" Margin="350,434,0,0" VerticalAlignment="Top" Width="104" Height="80" Click="button2_Click"/>
-        <Button x:Name="button3" Content="Copy" HorizontalAlignment="Left" Margin="94,546,0,0" VerticalAlignment="Top" Width="86" Height="42" Click="button3_Click"/>
-        <Button x:Name="button1" Content="?" HorizontalAlignment="Left" Margin="489,494,0,0" VerticalAlignment="Top" Width="24" RenderTransformOrigin="-0.375,0.825" Click="button1_Click"/>
+        <Button x:Name="BtnSend" Content="Send password to e-mail" HorizontalAlignment="Left" Margin="217,272,0,0" VerticalAlignment="Top" Width="146" Height="69" Click="BtnSend_Click" IsEnabled="False"/>
+        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Margin="26,167,0,444"  Width="118" TextChanged="richTextBox_TextChanged" IsReadOnly="True"/>
+        <Button x:Name="button2" Content="Encryption"  HorizontalAlignment="Left" Margin="227,381,0,0" VerticalAlignment="Top" Width="124" Height="41" Click="button2_Click" FontSize="16"/>
+        <Button x:Name="button3" Content="Copy Password" HorizontalAlignment="Left" Margin="26,227,0,0" VerticalAlignment="Top" Width="118" Height="32" Click="button3_Click" FontSize="16"/>
 
     </Grid>
 </Window>
