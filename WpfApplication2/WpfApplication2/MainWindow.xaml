@@ -5,18 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication2"
         mc:Ignorable="d"
-        Title="Password Generator" Height="700" Width="600" Background="LightBlue">
+        Title="Password Generator" Height="700" Width="600" Background="LightBlue" ResizeMode="NoResize">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="C://Users//wiku//password-generator//WpfApplication2//lataus.jpg"/>
+            <ImageBrush ImageSource="C://Users//Santun//Password-Generator//WpfApplication2//lataus.jpg"/>
         </Grid.Background>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="74" Margin="186,21,0,574" TextWrapping="Wrap"  Text="WELCOME" FontSize="36"  VerticalAlignment="Center" Width="180" SelectionBrush="{x:Null}" Background="{x:Null}" TextChanged="textBox_TextChanged"  Foreground="White"/>
-        <Button x:Name="button" Content="Generate password" FontSize="24" HorizontalAlignment="Left" Margin="94,331,0,0" VerticalAlignment="Top" Background="Orange" Width="360" Height="78" Click="button_Click"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="74" Margin="186,21,0,574" TextWrapping="Wrap"  Text="WELCOME" FontSize="36"  VerticalAlignment="Center" Width="180" SelectionBrush="{x:Null}" Background="{x:Null}" TextChanged="textBox_TextChanged"  Foreground="White" BorderBrush="#FF2F3032"/>
+        <Button x:Name="button" Content="Generate password" FontSize="24" HorizontalAlignment="Left" Margin="94,331,0,0" VerticalAlignment="Top" Background="Orange" Width="360" Height="78" Click="button_Click" IsEnabled="False"/>
         <CheckBox x:Name="upperCase" Content="Uppercase" HorizontalAlignment="Left" Margin="94,100,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="upperCase_Checked" Unchecked="upperCase_Unchecked" />
         <CheckBox x:Name="symbols" Content="Special symbols" HorizontalAlignment="Left" Margin="94,140,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="symbols_Checked" Unchecked="symbols_Unchecked"/>
         <CheckBox x:Name="lowerCase" Content="Lowercase" HorizontalAlignment="Left" Margin="308,100,0,0" VerticalAlignment="Top"  FontSize="20" Foreground="White" Checked="lowerCase_Checked" Unchecked="lowerCase_Unchecked" RenderTransformOrigin="2.108,-2.115"/>
         <CheckBox x:Name="numbers" Content="Numbers" HorizontalAlignment="Left" Margin="308,140,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="numbers_Checked" Unchecked="numbers_Unchecked" RenderTransformOrigin="-2.257,0.269"/>
-        <ComboBox x:Name="comboBox" IsEditable="True" IsReadOnly="True" Text="Length" HorizontalAlignment="Left" Margin="94,212,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged">
+        <ComboBox x:Name="comboBox" IsEditable="True" IsReadOnly="True" SelectedIndex="5" HorizontalAlignment="Left" Margin="94,212,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="comboBox_SelectionChanged">
             <ComboBoxItem Content="5"/>
             <ComboBoxItem Content="6"/>
             <ComboBoxItem Content="7"/>
@@ -47,14 +47,10 @@
             <ComboBoxItem Content="32"/>
         </ComboBox>
         <Button x:Name="BtnSend" Content="Send password to e-mail" HorizontalAlignment="Left" Margin="308,199,0,0" VerticalAlignment="Top" Width="146" Height="60" Click="BtnSend_Click"/>
-        <Button x:Name="button1" Content="Clear" HorizontalAlignment="Left" Margin="94,546,0,0"  VerticalAlignment="Top" Width="76" Height="42" Click="button1_Click"/>
-        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="81" Margin="94,432,0,155"  Width="160">
-            <FlowDocument>
-                <Paragraph>
-                    <Run Text="Your generated password is: "/>
-                </Paragraph>
-            </FlowDocument>
+        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="81" Margin="94,432,0,155"  Width="160" TextChanged="richTextBox_TextChanged">
         </RichTextBox>
+        <Button x:Name="button2" Content="Encryption"  HorizontalAlignment="Left" Margin="350,434,0,0" VerticalAlignment="Top" Width="104" Height="80" Click="button2_Click"/>
+        <Button x:Name="button3" Content="Copy" HorizontalAlignment="Left" Margin="94,546,0,0" VerticalAlignment="Top" Width="86" Height="42" Click="button3_Click"/>
 
     </Grid>
 </Window>

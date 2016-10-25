@@ -32,6 +32,8 @@ namespace WpfApplication2
         public string nums = "0123456789";
         public static int N;
         public static string passw;
+        public bool tila = false;
+        
 
         static readonly string PasswordHash = "P@@Sw0rd";
         static readonly string SaltKey = "S@LT&KEY";
@@ -41,10 +43,16 @@ namespace WpfApplication2
         {
             
             InitializeComponent();                                      // TÄYTYY KEKSIÄ PAREMPI VAIHTOEHTO
-            new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "C://Users//wiku//password-generator//WpfApplication2//lataus.jpg")));
+            new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "C://Users//Santun//Password-Generator//WpfApplication2//lataus.jpg")));
+
+            if (comboBox.Text == "Length" && tila == true)
+            {
+                button.IsEnabled = false;
+            }
+
 
         }
-        
+
 
         public static string generate()
         {
@@ -61,22 +69,24 @@ namespace WpfApplication2
         }
             
         private void button_Click(object sender, RoutedEventArgs e)
-        {
-          
-            
+        {  
+                    // Generoi salasanan ja kirjoittaa sen richTextBoxiin
+
+
             string salasana = generate();
             passw = salasana;
-            richTextBox.AppendText(salasana);
+            richTextBox.Document.Blocks.Clear();
             richTextBox.AppendText(Encrypt(generate()));
                
             
         }
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {    
-            
+        {
+           
             string myString = ((ComboBoxItem)comboBox.SelectedItem).Content.ToString();
             N = int.Parse(myString);
+            
             if (N < 8)
                 MessageBox.Show("Warning! It's not safe to have a password under 8 characters!");
 
@@ -89,24 +99,46 @@ namespace WpfApplication2
         private void upperCase_Checked(object sender, RoutedEventArgs e)
         {
             sallitut += UpperCase;
-            
-            
+            if (sallitut == "")
+            {
+               tila = button.IsEnabled = false;
+            }
+            else
+               tila = button.IsEnabled = true;
+
         }
         private void symbols_Checked(object sender, RoutedEventArgs e)
         {
             sallitut += Symbols;
-            
+            if (sallitut == "")
+            {
+                tila = button.IsEnabled = false;
+            }
+            else
+                tila = button.IsEnabled = true;
 
         }
 
         private void lowerCase_Checked(object sender, RoutedEventArgs e)
         {
             sallitut += LowerCase;
+            if (sallitut == "")
+            {
+                tila = button.IsEnabled = false;
+            }
+            else
+                tila = button.IsEnabled = true;
         }
 
         private void numbers_Checked(object sender, RoutedEventArgs e)
         {
             sallitut += nums;
+            if (sallitut == "")
+            {
+                tila = button.IsEnabled = false;
+            }
+            else
+                tila = button.IsEnabled = true;
         }
 
 
@@ -115,25 +147,49 @@ namespace WpfApplication2
         private void numbers_Unchecked(object sender, RoutedEventArgs e)
         {
             sallitut = sallitut.Replace(nums, "");
-            
+            if (sallitut == "")
+            {
+                tila = button.IsEnabled = false;
+            }
+            else
+                tila = button.IsEnabled = true;
+
         }
 
         private void lowerCase_Unchecked(object sender, RoutedEventArgs e)
         {
             sallitut = sallitut.Replace(LowerCase, "");
-            
+            if (sallitut == "")
+            {
+                tila = button.IsEnabled = false;
+            }
+            else
+                tila = button.IsEnabled = true;
+
         }
 
         private void symbols_Unchecked(object sender, RoutedEventArgs e)
         {
             sallitut = sallitut.Replace(Symbols, "");
-           
+            if (sallitut == "")
+            {
+                tila = button.IsEnabled = false;
+            }
+            else
+                tila = button.IsEnabled = true;
+
         }
 
         private void upperCase_Unchecked(object sender, RoutedEventArgs e)
         {
             sallitut = sallitut.Replace(UpperCase, "");
-            
+            if (sallitut == "")
+            {
+                tila = button.IsEnabled = false;
+            }
+            else
+                tila = button.IsEnabled = true;
+
         }
 
         // Ottaa parametrina generoidun salasanan  ja enkryptaa sen
@@ -179,59 +235,38 @@ namespace WpfApplication2
             cryptoStream.Close();
             return Encoding.UTF8.GetString(plainTextBytes, 0, decryptedByteCount).TrimEnd("\0".ToCharArray());
         }
-
-
-                // Lähettää sähköpostin kun nappia painaa! :))
+                
         private void BtnSend_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                MailMessage mail = new MailMessage();
-                //SMTP address and port here
-                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com", 587 );
-                //Put the email address
-                mail.From = new MailAddress("wikke93@gmail.com");
-                //Put the email where you want to send.
-                mail.To.Add("kekkosenseppo@gmail.com");
 
-                mail.Subject = "Generoitu Salasana";
+            Window1 win2 = new Window1();
+            win2.Show();
 
-                StringBuilder sbBody = new StringBuilder();
 
-                sbBody.AppendLine("Hei käyttäjä!");
-                sbBody.AppendLine("Tässä salasanasi!");
-                sbBody.AppendLine(passw);
-                
-
-                mail.Body = sbBody.ToString();
-
-                //mail.Attachments.Add(liite) tällä tavalla salasanan lähetys?
-
-                //username and password!
-
-                SmtpServer.Credentials = new System.Net.NetworkCredential("pwgenerator93@gmail.com", "aspretto");
-                //Set Smtp server port
-                SmtpServer.Port = 587;
-                SmtpServer.EnableSsl = true;
-
-                SmtpServer.Send(mail);
-                MessageBox.Show("Salasana lähetettiin :) ");
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.ToString());
-            }
+      
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            richTextBox.Document.Blocks.Clear();
-        }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            Window2 win3 = new Window2();
+            win3.Show();
+        }
+
+        private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            richTextBox.SelectAll();
+            richTextBox.Copy();
         }
     }
 }
