@@ -52,6 +52,7 @@ namespace WpfApplication2
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+            textBox.Clear();
             textBox.AppendText(Clipboard.GetText());
         }
     }

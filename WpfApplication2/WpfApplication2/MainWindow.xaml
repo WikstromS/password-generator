@@ -6,9 +6,12 @@
         xmlns:local="clr-namespace:WpfApplication2"
         mc:Ignorable="d"
         Title="Password Generator" Height="700" Width="600" Background="LightBlue" ResizeMode="NoResize">
-    <Grid>
+    <Grid Margin="0">
         <Grid.Background>
-            <ImageBrush ImageSource="C://Users//Santun//Password-Generator//WpfApplication2//lataus.jpg"/>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFD31616" Offset="1"/>
+            </LinearGradientBrush>
         </Grid.Background>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="74" Margin="186,21,0,574" TextWrapping="Wrap"  Text="WELCOME" FontSize="36"  VerticalAlignment="Center" Width="180" SelectionBrush="{x:Null}" Background="{x:Null}" TextChanged="textBox_TextChanged"  Foreground="White" BorderBrush="#FF2F3032"/>
         <Button x:Name="button" Content="Generate password" FontSize="24" HorizontalAlignment="Left" Margin="94,331,0,0" VerticalAlignment="Top" Background="Orange" Width="360" Height="78" Click="button_Click" IsEnabled="False"/>
@@ -46,9 +49,8 @@
             <ComboBoxItem Content="31"/>
             <ComboBoxItem Content="32"/>
         </ComboBox>
-        <Button x:Name="BtnSend" Content="Send password to e-mail" HorizontalAlignment="Left" Margin="308,199,0,0" VerticalAlignment="Top" Width="146" Height="60" Click="BtnSend_Click"/>
-        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="81" Margin="94,432,0,155"  Width="160" TextChanged="richTextBox_TextChanged">
-        </RichTextBox>
+        <Button x:Name="BtnSend" Content="Send password to e-mail" HorizontalAlignment="Left" Margin="308,199,0,0" VerticalAlignment="Top" Width="146" Height="60" Click="BtnSend_Click" IsEnabled="False"/>
+        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="81" Margin="94,432,0,155"  Width="160" TextChanged="richTextBox_TextChanged" IsReadOnly="True"></RichTextBox>
         <Button x:Name="button2" Content="Encryption"  HorizontalAlignment="Left" Margin="350,434,0,0" VerticalAlignment="Top" Width="104" Height="80" Click="button2_Click"/>
         <Button x:Name="button3" Content="Copy" HorizontalAlignment="Left" Margin="94,546,0,0" VerticalAlignment="Top" Width="86" Height="42" Click="button3_Click"/>
 

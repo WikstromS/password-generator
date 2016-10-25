@@ -43,14 +43,14 @@ namespace WpfApplication2
         {
             
             InitializeComponent();                                      // TÄYTYY KEKSIÄ PAREMPI VAIHTOEHTO
-            new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "C://Users//Santun//Password-Generator//WpfApplication2//lataus.jpg")));
+            //new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "C://Users//Santun//Password-Generator//WpfApplication2//lataus.jpg")));
 
             if (comboBox.Text == "Length" && tila == true)
             {
                 button.IsEnabled = false;
             }
-
-
+            
+        
         }
 
 
@@ -76,7 +76,8 @@ namespace WpfApplication2
             string salasana = generate();
             passw = salasana;
             richTextBox.Document.Blocks.Clear();
-            richTextBox.AppendText(Encrypt(generate()));
+            richTextBox.AppendText(passw);
+            BtnSend.IsEnabled = true;
                
             
         }
