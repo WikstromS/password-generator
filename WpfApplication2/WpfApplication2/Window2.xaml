@@ -15,7 +15,7 @@
         </Grid.Background>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="25,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" TextChanged="textBox_TextChanged" />
         <Button x:Name="button" Content="Decrypt" HorizontalAlignment="Left" Margin="244,96,0,0" VerticalAlignment="Top" Width="75" Click="button_Click" IsEnabled="{Binding ElementName=textBox, Path=Text.Length}" />
-        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="54" Margin="25,191,0,0" VerticalAlignment="Top" Width="119" TextChanged="richTextBox_TextChanged">
+        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="54" Margin="25,182,0,0" VerticalAlignment="Top" Width="119" TextChanged="richTextBox_TextChanged" IsReadOnly="True">
             <FlowDocument>
                 <Paragraph>
                     <Run Text=""/>

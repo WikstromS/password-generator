@@ -62,3 +62,5 @@ C:\Users\wiku\password-generator\WpfApplication2\WpfApplication2\obj\Debug\Windo
 C:\Users\wiku\password-generator\WpfApplication2\WpfApplication2\obj\Debug\Window2.g.cs
 C:\Users\wiku\password-generator\WpfApplication2\WpfApplication2\obj\Debug\Window1.baml
 C:\Users\wiku\password-generator\WpfApplication2\WpfApplication2\obj\Debug\Window2.baml
+C:\Users\wiku\password-generator\WpfApplication2\WpfApplication2\obj\Debug\Window3.g.cs
+C:\Users\wiku\password-generator\WpfApplication2\WpfApplication2\obj\Debug\Window3.baml

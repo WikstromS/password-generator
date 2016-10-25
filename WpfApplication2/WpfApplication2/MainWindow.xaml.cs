@@ -16,6 +16,7 @@ using System.Security.Cryptography;
 using System.IO;
 using Microsoft.Win32;
 using System.Net.Mail;
+using WpfApplication2;
 
 namespace WpfApplication2
 {
@@ -257,6 +258,7 @@ namespace WpfApplication2
         {
             Window2 win3 = new Window2();
             win3.Show();
+            
         }
 
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -268,6 +270,12 @@ namespace WpfApplication2
         {
             richTextBox.SelectAll();
             richTextBox.Copy();
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            Window3 win4 = new Window3();
+            win4.Show();
         }
     }
 }

@@ -53,6 +53,7 @@
         <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Height="81" Margin="94,432,0,155"  Width="160" TextChanged="richTextBox_TextChanged" IsReadOnly="True"></RichTextBox>
         <Button x:Name="button2" Content="Encryption"  HorizontalAlignment="Left" Margin="350,434,0,0" VerticalAlignment="Top" Width="104" Height="80" Click="button2_Click"/>
         <Button x:Name="button3" Content="Copy" HorizontalAlignment="Left" Margin="94,546,0,0" VerticalAlignment="Top" Width="86" Height="42" Click="button3_Click"/>
+        <Button x:Name="button1" Content="?" HorizontalAlignment="Left" Margin="489,494,0,0" VerticalAlignment="Top" Width="24" RenderTransformOrigin="-0.375,0.825" Click="button1_Click"/>
 
     </Grid>
 </Window>
