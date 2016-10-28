@@ -53,6 +53,10 @@
         <Button x:Name="button2" Content="Encryption"  HorizontalAlignment="Left" Margin="227,381,0,0" VerticalAlignment="Top" Width="124" Height="41" Click="button2_Click" FontSize="16"/>
         <Button x:Name="button3" Content="Copy Password" HorizontalAlignment="Left" Margin="26,227,0,0" VerticalAlignment="Top" Width="118" Height="32" Click="button3_Click" FontSize="16"/>
         <Button x:Name="button1" Content="?" HorizontalAlignment="Left" Margin="382,400,0,0" VerticalAlignment="Top" Width="34" Height="22" Click="button1_Click"/>
-
+        <TextBlock Margin="5,272,388,369" FontSize="14" Cursor="Hand" ToolTip="Before you click, generate and copy your password!">           
+    <Hyperlink NavigateUri="https://howsecureismypassword.net/" RequestNavigate="Hyperlink_RequestNavigate">
+        Check Password Strength Here
+    </Hyperlink>
+        </TextBlock>
     </Grid>
 </Window>

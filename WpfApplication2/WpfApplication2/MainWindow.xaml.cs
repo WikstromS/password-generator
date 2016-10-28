@@ -17,6 +17,7 @@ using System.IO;
 using Microsoft.Win32;
 using System.Net.Mail;
 using WpfApplication2;
+using System.Diagnostics;
 
 namespace WpfApplication2
 {
@@ -248,6 +249,11 @@ namespace WpfApplication2
       
         }
 
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
+        }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
