@@ -57,10 +57,6 @@ namespace WpfApplication2
 
                 mail.Body = sbBody.ToString();
 
-                //mail.Attachments.Add(liite) tällä tavalla salasanan lähetys?
-
-                //username and password!
-
                 SmtpServer.Credentials = new System.Net.NetworkCredential("pwgenerator93@gmail.com", "aspretto");
                 //Set Smtp server port
                 SmtpServer.Port = 587;

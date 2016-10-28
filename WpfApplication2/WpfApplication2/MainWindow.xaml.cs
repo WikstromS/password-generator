@@ -55,7 +55,6 @@ namespace WpfApplication2
         
         }
 
-
         public static string generate()
         {
             int pituus = N;
