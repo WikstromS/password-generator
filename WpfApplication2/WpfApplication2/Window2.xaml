@@ -10,7 +10,7 @@
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="0"/>
-                <GradientStop Color="#FFD8B1B1" Offset="1"/>
+                <GradientStop Color="#FFD31616" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="25,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="184" TextChanged="textBox_TextChanged" />
