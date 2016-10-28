@@ -38,9 +38,9 @@ namespace WpfApplication2
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            
             EncrPw = textBox.Text;
-
-
+            richTextBox.Document.Blocks.Clear();
             richTextBox.AppendText(WpfApplication2.MainWindow.Decrypt(EncrPw));
         }
 
@@ -52,6 +52,7 @@ namespace WpfApplication2
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+            textBox.Clear();
             textBox.AppendText(Clipboard.GetText());
         }
     }

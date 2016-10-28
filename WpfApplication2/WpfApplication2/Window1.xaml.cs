@@ -72,6 +72,7 @@ namespace WpfApplication2
             } 
             catch (Exception ex)
             {
+                MessageBox.Show("Check you Email address");
                 Console.WriteLine(ex.ToString());
             } 
             this.Close(); 
