@@ -28,6 +28,7 @@ namespace WpfApplication2
         {
             InitializeComponent();
         }
+
         // Lähettää sähköpostin kun nappia painaa! :))
         private void button_Click(object sender, RoutedEventArgs e)
         {
@@ -56,10 +57,6 @@ namespace WpfApplication2
                 
 
                 mail.Body = sbBody.ToString();
-
-                //mail.Attachments.Add(liite) tällä tavalla salasanan lähetys?
-
-                //username and password!
 
                 SmtpServer.Credentials = new System.Net.NetworkCredential("pwgenerator93@gmail.com", "aspretto");
                 //Set Smtp server port

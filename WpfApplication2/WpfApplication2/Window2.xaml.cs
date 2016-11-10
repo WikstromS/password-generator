@@ -38,10 +38,16 @@ namespace WpfApplication2
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            
-            EncrPw = textBox.Text;
-            richTextBox.Document.Blocks.Clear();
-            richTextBox.AppendText(WpfApplication2.MainWindow.Decrypt(EncrPw));
+            try
+            {
+                EncrPw = textBox.Text;
+                richTextBox.Document.Blocks.Clear();
+                richTextBox.AppendText(WpfApplication2.MainWindow.Decrypt(EncrPw));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Check the password you are trying to decrypt");
+            }
         }
 
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)

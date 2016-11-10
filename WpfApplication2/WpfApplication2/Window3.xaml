@@ -13,6 +13,9 @@
                 <GradientStop Color="#FFD31616" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
+        <ScrollViewer>
+            <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top"  Width="252" Foreground="#FFF7F5F5"><Run Text="Here are tips of how things work around here!"/><LineBreak/><Run/><LineBreak/><Run Text="Question 1. How to generate password successfully? Check all password properties you want and click &quot;Generate password&quot;-button."/><LineBreak/><Run/><LineBreak/><Run Text="Question 2. How to check password's strength? After generating password succesfully, press &quot;Copy Password&quot;-Button on the left side of the main window and then click &quot;Check Password Strength Here&quot;-link. "/><LineBreak/><Run Text="At the website paste the just copied password to wanted text bar. The website application will tell you how long it will take to crack your password."/><LineBreak/><Run/><LineBreak/><Run Text="Question 3. How to send password to e-mail? After generating password to e-mail, click &quot;Send password to e-mail&quot;-button. "/><LineBreak/><Run Text="Here type your e-mail address to the wanted tex box, click &quot;Save&quot; and then press &quot;Send Password&quot;-button. Now check your e-mail!"/><LineBreak/><Run Text="Here is the sender's e-mail address: pwgenerator93@gmail.com ;)"/><LineBreak/><Run/><LineBreak/><Run Text="Question 4. How to encrypt a password? After sending password successfully to e-mail of your choice, press the &quot;Encryption&quot;-button, check your e-mail for the crypted password that was send to you"/><LineBreak/><Run Text="and copy the e-mails encrypted password here. The application will now show you the real password as a plain text."  /></TextBlock>
+        </ScrollViewer>
 
     </Grid>
 </Window>

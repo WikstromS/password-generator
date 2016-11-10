@@ -17,6 +17,7 @@ using System.IO;
 using Microsoft.Win32;
 using System.Net.Mail;
 using WpfApplication2;
+using System.Diagnostics;
 
 namespace WpfApplication2
 {
@@ -53,7 +54,6 @@ namespace WpfApplication2
             
         
         }
-
 
         public static string generate()
         {
@@ -238,27 +238,45 @@ namespace WpfApplication2
             return Encoding.UTF8.GetString(plainTextBytes, 0, decryptedByteCount).TrimEnd("\0".ToCharArray());
         }
                 
+        // Avaa Send Email ikkunan
         private void BtnSend_Click(object sender, RoutedEventArgs e)
         {
 
             Window1 win2 = new Window1();
             win2.Show();
-
-
-      
         }
 
-
-        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
+        // Avaa Encryption ikkunan
         private void button2_Click(object sender, RoutedEventArgs e)
         {
             Window2 win3 = new Window2();
             win3.Show();
-            
+        }
+
+        // Avaa Tips ikkunan
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            Window3 win4 = new Window3();
+            win4.Show();
+        }
+
+        // Linkki Nettisivulle, jossa voi testata salasanan vahvuutta
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
+        }
+
+        // Kopiointi nappula
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            richTextBox.SelectAll();
+            richTextBox.Copy();
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
 
         private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -266,18 +284,6 @@ namespace WpfApplication2
 
         }
 
-        private void button3_Click(object sender, RoutedEventArgs e)
-        {
-            richTextBox.SelectAll();
-            richTextBox.Copy();
-        }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
-        {
-            Window3 win4 = new Window3();
-            win4.Show();
-        }
-
-       
     }
 }

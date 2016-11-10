@@ -13,12 +13,12 @@
                 <GradientStop Color="#FFD31616" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="button" Content="Generate password" FontSize="24" HorizontalAlignment="Left" Margin="177,176,0,0" VerticalAlignment="Top" Background="Orange" Width="239" Height="57" Click="button_Click" IsEnabled="False"/>
-        <CheckBox x:Name="upperCase" Content="Uppercase" HorizontalAlignment="Left" Margin="139,43,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="upperCase_Checked" Unchecked="upperCase_Unchecked" />
-        <CheckBox x:Name="symbols" Content="Special symbols" HorizontalAlignment="Left" Margin="139,79,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="symbols_Checked" Unchecked="symbols_Unchecked"/>
-        <CheckBox x:Name="lowerCase" Content="Lowercase" HorizontalAlignment="Left" Margin="329,43,0,0" VerticalAlignment="Top"  FontSize="20" Foreground="White" Checked="lowerCase_Checked" Unchecked="lowerCase_Unchecked" RenderTransformOrigin="2.108,-2.115"/>
-        <CheckBox x:Name="numbers" Content="Numbers" HorizontalAlignment="Left" Margin="329,79,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="numbers_Checked" Unchecked="numbers_Unchecked" RenderTransformOrigin="-2.257,0.269"/>
-        <ComboBox x:Name="comboBox" IsEditable="True" IsReadOnly="True" SelectedIndex="5" HorizontalAlignment="Left" Margin="253,122,0,0" VerticalAlignment="Top" Width="74" SelectionChanged="comboBox_SelectionChanged" Height="25">
+        <Button x:Name="button" Content="Generate password" FontSize="24" Margin="186,167,185,0" VerticalAlignment="Top" Background="Orange" Height="48" Click="button_Click" IsEnabled="False"/>
+        <CheckBox x:Name="upperCase" Content="Uppercase" HorizontalAlignment="Left" Margin="116,43,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="upperCase_Checked" Unchecked="upperCase_Unchecked" />
+        <CheckBox x:Name="symbols" Content="Special symbols" Margin="116,84,318,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="symbols_Checked" Unchecked="symbols_Unchecked"/>
+        <CheckBox x:Name="lowerCase" Content="Lowercase" Margin="339,43,144,0" VerticalAlignment="Top"  FontSize="20" Foreground="White" Checked="lowerCase_Checked" Unchecked="lowerCase_Unchecked" RenderTransformOrigin="2.108,-2.115"/>
+        <CheckBox x:Name="numbers" Content="Numbers" Margin="339,84,154,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Checked="numbers_Checked" Unchecked="numbers_Unchecked" RenderTransformOrigin="-2.257,0.269"/>
+        <ComboBox x:Name="comboBox" IsEditable="True" IsReadOnly="True" SelectedIndex="5" Margin="260,126,260,0" VerticalAlignment="Top" SelectionChanged="comboBox_SelectionChanged" Height="25" ToolTip="Password Length">
             <ComboBoxItem Content="5"/>
             <ComboBoxItem Content="6"/>
             <ComboBoxItem Content="7"/>
@@ -48,11 +48,20 @@
             <ComboBoxItem Content="31"/>
             <ComboBoxItem Content="32"/>
         </ComboBox>
-        <Button x:Name="BtnSend" Content="Send password to e-mail" HorizontalAlignment="Left" Margin="217,272,0,0" VerticalAlignment="Top" Width="146" Height="69" Click="BtnSend_Click" IsEnabled="False"/>
-        <RichTextBox x:Name="richTextBox" HorizontalAlignment="Left" Margin="26,167,0,444"  Width="118" TextChanged="richTextBox_TextChanged" IsReadOnly="True"/>
-        <Button x:Name="button2" Content="Encryption"  HorizontalAlignment="Left" Margin="227,381,0,0" VerticalAlignment="Top" Width="124" Height="41" Click="button2_Click" FontSize="16"/>
-        <Button x:Name="button3" Content="Copy Password" HorizontalAlignment="Left" Margin="26,227,0,0" VerticalAlignment="Top" Width="118" Height="32" Click="button3_Click" FontSize="16"/>
-        <Button x:Name="button1" Content="?" HorizontalAlignment="Left" Margin="382,400,0,0" VerticalAlignment="Top" Width="34" Height="22" Click="button1_Click"/>
-
+        <Button x:Name="BtnSend" Content="Send password to e-mail" Margin="224,449,224,0" VerticalAlignment="Top" Height="69" Click="BtnSend_Click" IsEnabled="False"/>
+        <RichTextBox x:Name="richTextBox" Margin="234,239,232,349" TextChanged="richTextBox_TextChanged" IsReadOnly="True"/>
+        <Button x:Name="button2" Content="Encryption" Margin="235,550,235,0" VerticalAlignment="Top" Height="40" Click="button2_Click" FontSize="16"/>
+        <Button x:Name="button3" Content="Copy Password" HorizontalAlignment="Left" Margin="235,327,0,0" VerticalAlignment="Top" Width="117" Height="29" Click="button3_Click" FontSize="16"/>
+        <Button x:Name="button1" Content="Help" HorizontalAlignment="Left" Margin="532,10,0,0" VerticalAlignment="Top" Width="34" Height="22" Click="button1_Click"/>
+        <TextBlock Margin="196,393,197,248" FontSize="14" Cursor="Hand" ToolTip="Before you click, generate and copy your password!">           
+    <Hyperlink NavigateUri="https://howsecureismypassword.net/" RequestNavigate="Hyperlink_RequestNavigate">
+        Check Password Strength Here
+    </Hyperlink>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="38" Width="124" Margin="10,129,0,0" Foreground="White"><Run Language="fi-fi" Text="1. Generate Password"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="181" Margin="10,393,0,0" Foreground="White"><Run Language="fi-fi" Text="3. Check the Password Strength"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="209" Margin="10,475,0,0" Foreground="White"><Run Language="fi-fi" Text="4. Send Protected Password to e-mail"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="209" Margin="10,560,0,0" Foreground="White"><Run Language="fi-fi" Text="5. Password to Readable Form"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="151" Margin="10,261,0,0" Foreground="White"><Run Language="fi-fi" Text="2. Copy the Password"/></TextBlock>
     </Grid>
 </Window>
