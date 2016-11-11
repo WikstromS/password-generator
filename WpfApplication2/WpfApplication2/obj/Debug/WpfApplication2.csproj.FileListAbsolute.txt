@@ -74,3 +74,5 @@ C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\obj\Debug\Win
 C:\Users\wiku\password-generator\WpfApplication2\WpfApplication2\bin\Debug\nunit.framework.dll
 C:\Users\wiku\password-generator\WpfApplication2\WpfApplication2\bin\Debug\nunit.framework.xml
 C:\Users\wiku\password-generator\WpfApplication2\WpfApplication2\obj\Debug\WpfApplication2.csprojResolveAssemblyReference.cache
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\bin\Debug\nunit.framework.dll
+C:\Users\Santun\Password-Generator\WpfApplication2\WpfApplication2\bin\Debug\nunit.framework.xml
