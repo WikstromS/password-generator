@@ -21,30 +21,27 @@ using System.Diagnostics;
 
 namespace WpfApplication2
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
 
         public static string sallitut = "";
-        public string LowerCase = "abcdefghijklmnopqrstuvwxyzåöä";
-        public string UpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÖÄ";
-        public string Symbols = "!@$?_-";
+        public string lowerCase = "abcdefghijklmnopqrstuvwxyzåöä";
+        public string upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÖÄ";
+        public string symbols = "!@$?_-";
         public string nums = "0123456789";
-        public static int N;
+        public static int n;
         public static string passw;
         public bool tila = false;
         
 
-        static readonly string PasswordHash = "P@@Sw0rd";
-        static readonly string SaltKey = "S@LT&KEY";
+        static readonly string passwordHash = "P@@Sw0rd";
+        static readonly string saltKey = "S@LT&KEY";
         static readonly string VIKey = "@1B2c3D4e5F6g7H8";
 
         public MainWindow()
         {
             
-            InitializeComponent();                                      // TÄYTYY KEKSIÄ PAREMPI VAIHTOEHTO
+            InitializeComponent();                                     
             //new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(this), "C://Users//Santun//Password-Generator//WpfApplication2//lataus.jpg")));
 
             if (comboBox.Text == "Length" && tila == true)
@@ -55,15 +52,15 @@ namespace WpfApplication2
         
         }
 
-        public static string generate()
+        public static string Generate()
         {
-            int pituus = N;
+            int pituus = n;
             char[] kirjaimet = new char[pituus];
             Random rand = new Random();
 
             for (int i = 0; i < pituus; i++)
             {
-                kirjaimet[i] = sallitut[rand.Next(0, sallitut.Length)];         //TOIMII 
+                kirjaimet[i] = sallitut[rand.Next(0, sallitut.Length)];       
             }
             string salasana = new string(kirjaimet);
             return salasana;
@@ -74,7 +71,7 @@ namespace WpfApplication2
                     // Generoi salasanan ja kirjoittaa sen richTextBoxiin
 
 
-            string salasana = generate();
+            string salasana = Generate();
             passw = salasana;
             richTextBox.Document.Blocks.Clear();
             richTextBox.AppendText(passw);
@@ -87,9 +84,9 @@ namespace WpfApplication2
         {
            
             string myString = ((ComboBoxItem)comboBox.SelectedItem).Content.ToString();
-            N = int.Parse(myString);
+            n = int.Parse(myString);
             
-            if (N < 8)
+            if (n < 8)
                 MessageBox.Show("Warning! It's not safe to have a password under 8 characters!");
 
             //ottaa comboboxin valitun ja muuttaa sen intiksi
@@ -98,9 +95,9 @@ namespace WpfApplication2
       
 
         // CHECCKAUKSET
-        private void upperCase_Checked(object sender, RoutedEventArgs e)
+        private void UpperCase_Checked(object sender, RoutedEventArgs e)
         {
-            sallitut += UpperCase;
+            sallitut += upperCase;
             if (sallitut == "")
             {
                tila = button.IsEnabled = false;
@@ -109,9 +106,9 @@ namespace WpfApplication2
                tila = button.IsEnabled = true;
 
         }
-        private void symbols_Checked(object sender, RoutedEventArgs e)
+        private void Symbols_Checked(object sender, RoutedEventArgs e)
         {
-            sallitut += Symbols;
+            sallitut += symbols;
             if (sallitut == "")
             {
                 tila = button.IsEnabled = false;
@@ -121,9 +118,9 @@ namespace WpfApplication2
 
         }
 
-        private void lowerCase_Checked(object sender, RoutedEventArgs e)
+        private void LowerCase_Checked(object sender, RoutedEventArgs e)
         {
-            sallitut += LowerCase;
+            sallitut += lowerCase;
             if (sallitut == "")
             {
                 tila = button.IsEnabled = false;
@@ -132,7 +129,7 @@ namespace WpfApplication2
                 tila = button.IsEnabled = true;
         }
 
-        private void numbers_Checked(object sender, RoutedEventArgs e)
+        private void Numbers_Checked(object sender, RoutedEventArgs e)
         {
             sallitut += nums;
             if (sallitut == "")
@@ -146,7 +143,7 @@ namespace WpfApplication2
 
                     // UNCHECKKAUSET
 
-        private void numbers_Unchecked(object sender, RoutedEventArgs e)
+        private void Numbers_Unchecked(object sender, RoutedEventArgs e)
         {
             sallitut = sallitut.Replace(nums, "");
             if (sallitut == "")
@@ -158,9 +155,9 @@ namespace WpfApplication2
 
         }
 
-        private void lowerCase_Unchecked(object sender, RoutedEventArgs e)
+        private void LowerCase_Unchecked(object sender, RoutedEventArgs e)
         {
-            sallitut = sallitut.Replace(LowerCase, "");
+            sallitut = sallitut.Replace(lowerCase, "");
             if (sallitut == "")
             {
                 tila = button.IsEnabled = false;
@@ -170,9 +167,9 @@ namespace WpfApplication2
 
         }
 
-        private void symbols_Unchecked(object sender, RoutedEventArgs e)
+        private void Symbols_Unchecked(object sender, RoutedEventArgs e)
         {
-            sallitut = sallitut.Replace(Symbols, "");
+            sallitut = sallitut.Replace(symbols, "");
             if (sallitut == "")
             {
                 tila = button.IsEnabled = false;
@@ -182,9 +179,9 @@ namespace WpfApplication2
 
         }
 
-        private void upperCase_Unchecked(object sender, RoutedEventArgs e)
+        private void UpperCase_Unchecked(object sender, RoutedEventArgs e)
         {
-            sallitut = sallitut.Replace(UpperCase, "");
+            sallitut = sallitut.Replace(upperCase, "");
             if (sallitut == "")
             {
                 tila = button.IsEnabled = false;
@@ -199,7 +196,7 @@ namespace WpfApplication2
         {
             byte[] plainTextBytes = Encoding.UTF8.GetBytes(plainText);
 
-            byte[] keyBytes = new Rfc2898DeriveBytes(PasswordHash, Encoding.ASCII.GetBytes(SaltKey)).GetBytes(256 / 8);
+            byte[] keyBytes = new Rfc2898DeriveBytes(passwordHash, Encoding.ASCII.GetBytes(saltKey)).GetBytes(256 / 8);
             var symmetricKey = new RijndaelManaged() { Mode = CipherMode.CBC, Padding = PaddingMode.Zeros };
             var encryptor = symmetricKey.CreateEncryptor(keyBytes, Encoding.ASCII.GetBytes(VIKey));
 
@@ -224,7 +221,7 @@ namespace WpfApplication2
         public static string Decrypt(string encryptedText)
         {
             byte[] cipherTextBytes = Convert.FromBase64String(encryptedText);
-            byte[] keyBytes = new Rfc2898DeriveBytes(PasswordHash, Encoding.ASCII.GetBytes(SaltKey)).GetBytes(256 / 8);
+            byte[] keyBytes = new Rfc2898DeriveBytes(passwordHash, Encoding.ASCII.GetBytes(saltKey)).GetBytes(256 / 8);
             var symmetricKey = new RijndaelManaged() { Mode = CipherMode.CBC, Padding = PaddingMode.None };
 
             var decryptor = symmetricKey.CreateDecryptor(keyBytes, Encoding.ASCII.GetBytes(VIKey));
@@ -273,17 +270,6 @@ namespace WpfApplication2
             richTextBox.SelectAll();
             richTextBox.Copy();
         }
-
-        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void richTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
 
     }
 }
